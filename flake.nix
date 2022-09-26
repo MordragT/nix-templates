@@ -1,7 +1,7 @@
 {
   description = "A collection of flake templates";
 
-  outputs = { self, rust, python, deno, slides }: {
+  outputs = { self }: {
 
     templates = {
       rust = {
