@@ -1,0 +1,12 @@
+[book]
+authors = ["Your Name"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Template"
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[output.html]
+mathjax-support = true

@@ -44,6 +44,15 @@
         '';
       };
 
+      mdbook = {
+        path = ./mdbook;
+        description = "mdbook template for nix";
+        welcomeText = ''
+          You have created a mdbook template that will help you spin up
+          your book. See the README for further information.
+        '';
+      };
+
       slides = {
         path = ./slides;
         description = "Presentation development template using reveal.js";
