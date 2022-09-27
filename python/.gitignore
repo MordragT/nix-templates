@@ -1,3 +1,4 @@
 result
 __pycache__
 dist
+.direnv/
