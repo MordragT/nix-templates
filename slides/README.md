@@ -2,7 +2,7 @@
 
 # ❄️ nix-template-slides 🗒️
 
-[![NixOS](https://img.shields.io/badge/Made_for-javascript-yellow.svg?logo=javascript)](https://nixos.org) [![NixOS](https://img.shields.io/badge/Flakes-Nix-informational.svg?logo=nixos)](https://nixos.org) ![License](https://img.shields.io/github/license/mordragt/nix-template-python) 
+[![NixOS](https://img.shields.io/badge/Made_for-javascript-yellow.svg?logo=javascript&style=for-the-badge&logo=appveyor)](https://www.javascript.com/) [![NixOS](https://img.shields.io/badge/Flakes-Nix-informational.svg?logo=nixos&style=for-the-badge&logo=appveyor)](https://nixos.org) ![License](https://img.shields.io/github/license/mordragt/nix-templates?style=for-the-badge&logo=appveyor) 
 
 Minimal **Slides** template for **Nix**
 

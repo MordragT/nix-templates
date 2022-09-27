@@ -20,6 +20,8 @@ Minimal development templates for **Nix**
 - Deno runtime development template using deno2nix 🦖
 - Rust development template using fenix 🦀
 - Python development template using poetry2nix 🐍
+- Jupyter development template for Python using JupyterWith 🪐
+- mdbook template for your documentation 📚
 - Presentation development template using reveal.js 🗒️
 - Simple trivial template using flake-utils 🚀
 

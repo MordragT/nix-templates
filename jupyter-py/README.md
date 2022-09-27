@@ -1,8 +1,8 @@
 <div align=center>
 
-# ❄️ nix-template-jupyter-py 🐍
+# ❄️ nix-template-jupyter-py 🪐
 
-[![NixOS](https://img.shields.io/badge/Made_for-Python-blue.svg?logo=python)](https://nixos.org) [![NixOS](https://img.shields.io/badge/Flakes-Nix-informational.svg?logo=nixos)](https://nixos.org) ![License](https://img.shields.io/github/license/mordragt/nix-template-python) 
+[![NixOS](https://img.shields.io/badge/Made_for-Python-blue.svg?logo=python&style=for-the-badge&logo=appveyor)](https://www.python.org/) [![NixOS](https://img.shields.io/badge/Flakes-Nix-informational.svg?logo=nixos&style=for-the-badge&logo=appveyor)](https://nixos.org) ![License](https://img.shields.io/github/license/mordragt/nix-templates?style=for-the-badge&logo=appveyor) 
 
 Minimal **Jupyter** development template for **Python**
 
@@ -38,7 +38,7 @@ For more information about the configuration with JupyterWith look [here](https:
 
 #### Support
 
-Consider starring the repo ⭐🐍
+Consider starring the repo ⭐🪐
 
 #### Acknowledgments
 
