@@ -1,0 +1,5 @@
+result
+.direnv/
+.ipynb_checkpoints/
+.jupyter/
+build/
