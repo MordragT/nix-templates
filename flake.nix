@@ -24,6 +24,16 @@
         '';
       };
 
+      kotlin = {
+        path = ./kotlin;
+        description = "Kotlin development template using gradle";
+        welcomeText = ''
+          You have created a Kotlin template that will help you manage
+          your Gradle project. See the README for instructions on how to
+          use the template.
+        '';
+      };
+
       jupyter-py = {
         path = ./jupyter-py;
         description = "Jupyter development template for Python using JupyterWith";
