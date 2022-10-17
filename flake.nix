@@ -54,6 +54,16 @@
         '';
       };
 
+      tauri = {
+        path = ./tauri;
+        description = "Tauri development template";
+        welcomeText = ''
+          You have created a Tauri template that will help you manage
+          your Application project. See the README for instructions on
+          how to use the template.
+        '';
+      };
+
       mdbook = {
         path = ./mdbook;
         description = "mdbook template for nix";
