@@ -22,7 +22,12 @@ Minimal **Tauri** development template for **Nix**
 #### So how do I use it ??
 
 Click on the `Use this template` button (https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
-and run `nix flake update .` to update the flake lock
+and run `nix flake update .` to update the flake lock.
+Then initialize the tauri project with:
+
+```sh
+yarn create tauri-app
+```
 
 #### Commands
 
