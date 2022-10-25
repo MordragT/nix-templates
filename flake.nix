@@ -73,6 +73,15 @@
         '';
       };
 
+      tex = {
+        path = ./tex;
+        description = "Tex template for nix using tectonic";
+        welcomeText = ''
+          You have created a Tex template that will help you manage your
+          document. See the README for further information.
+        '';
+      };
+
       slides = {
         path = ./slides;
         description = "Presentation development template using reveal.js";

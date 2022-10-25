@@ -20,9 +20,11 @@ Minimal development templates for **Nix**
 - Deno runtime development template using deno2nix 🦖
 - Rust development template using fenix 🦀
 - Python development template using poetry2nix 🐍
+- Tauri development template 🦬
 - Jupyter development template for Python using JupyterWith 🪐
 - mdbook template for your documentation 📚
 - Presentation development template using reveal.js 🗒️
+- Tex development template using tectonic 📜
 - Simple trivial template using flake-utils 🚀
 
 #### So how do I use it ??
@@ -32,7 +34,7 @@ To get started fast just use the following command:
 
 ```bash
 # The name corresponds to the different templates provided:
-# [deno, rust, python, slides, trivial]
+# [deno, rust, python, tauri, jupyter-py, mdbook, slides, tex, trivial]
 nix flake init -t github:MordragT/nix-templates#<name>
 ```
 

@@ -1,10 +1,10 @@
 <div align=center>
 
-# ❄️ nix-template-trivial 🚀
+# ❄️ nix-template-tex 📜
 
  [![NixOS](https://img.shields.io/badge/Flakes-Nix-informational.svg?logo=nixos&style=for-the-badge)](https://nixos.org) ![License](https://img.shields.io/github/license/mordragt/nix-templates?style=for-the-badge) 
 
-Minimal development template for **Nix**
+Minimal Tex development template for **Nix**
 
 </div>
 
@@ -24,9 +24,9 @@ and run `nix flake update` to update the flake lock
 
 #### Commands
 
-- `nix develop`: opens up a `bash` shell with the specified packages
-- `nix build` : builds the package to the symbolic `result` directory
-- `nix run`: runs the package
+- `nix develop`: opens up a `bash` shell with tectonic
+- `just build`: builds the Tex document into an pdf
+- `just watch`: watches for changes
 
 #### FAQ
 
@@ -34,4 +34,4 @@ and run `nix flake update` to update the flake lock
 
 #### Support
 
-Consider starring the repo ⭐🚀
+Consider starring the repo ⭐📜
