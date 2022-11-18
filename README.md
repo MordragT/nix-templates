@@ -25,6 +25,7 @@ Minimal development templates for **Nix**
 - mdbook template for your documentation 📚
 - Presentation development template using reveal.js 🗒️
 - Tex development template using tectonic 📜
+- Svelte development template with tailwind.css
 - Simple trivial template using flake-utils 🚀
 
 #### So how do I use it ??

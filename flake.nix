@@ -92,6 +92,16 @@
         '';
       };
 
+      svelte-tailwind = {
+        path = ./svelte-tailwind;
+        description = "Svelte development template with tailwind.css";
+        welcomeText = ''
+          You have created a Svelte template that will help you manage
+          your project. See the README for instructions on how to
+          use the template.
+        '';
+      };
+
       trivial = {
         path = ./trivial;
         description = "Simple template using flake-utils";
