@@ -57,8 +57,13 @@
               enable = true;
 
               virtualHosts.${cfg.fqdn}.extraConfig = ''
-                encode gzip;
-                root ${self.packages.${pkgs.system}.default}
+                root * ${self.packages.${pkgs.system}.default}
+                encode gzip
+                file_server
+
+                handle_errors {
+                  respond "{err.status_code} {err.status_text}"
+                }
               '';
             };
           };
