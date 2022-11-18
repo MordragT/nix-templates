@@ -58,7 +58,7 @@
 
               virtualHosts.${cfg.fqdn}.extraConfig = ''
                 encode gzip;
-                root ${self.packages.${system}.default}
+                root ${self.packages.${pkgs.system}.default}
               '';
             };
           };
