@@ -1,8 +1,13 @@
 {
   description = "Your Python Jupyter Project";
 
-  inputs.utils.url = "github:numtide/flake-utils";
-  inputs.jupyterWith.url = "github:tweag/jupyterWith/main";
+  inputs = {
+    utils.url = "github:numtide/flake-utils";
+    jupyterWith = {
+      url = "github:tweag/jupyterWith";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
 
   outputs =
     { self
@@ -12,23 +17,23 @@
     }:
     utils.lib.eachDefaultSystem (system:
     let
-      inherit (jupyterWith.lib.${system}) mkJupyterlabEnvironmentFromPath;
-      jupyterEnvironment = mkJupyterlabEnvironmentFromPath ./kernels;
+      inherit (jupyterWith.lib.${system}) mkJupyterlabFromPath;
+      jupyterlab = mkJupyterlabFromPath ./kernels { inherit pkgs; };
       pkgs = import nixpkgs { inherit system; };
     in
     rec {
-      packages = { inherit jupyterEnvironment; };
-      packages.default = jupyterEnvironment;
+      packages = { inherit jupyterlab; };
+      packages.default = jupyterlab;
 
       apps.default = utils.lib.mkApp
         {
-          drv = jupyterEnvironment;
+          drv = jupyterlab;
           name = "jupyter-lab";
         };
 
       devShells.default = pkgs.mkShell {
         buildInputs = with pkgs; [
-          jupyterEnvironment
+          jupyterlab
           pandoc
           tectonic
           biber

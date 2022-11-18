@@ -1,10 +1,10 @@
-{ pkgs
+{ name
 , availableKernels
-, kernelName
-,
+, extraArgs
 }:
-availableKernels.python.override {
-  name = "py-data-science"; #"custom-${kernelName}"; # must be unique
-  displayName = "Python Data Science"; #"custom ${kernelName}";
+availableKernels.python {
+  inherit name;
+  inherit (extraArgs) pkgs;
+  displayName = "Python Data Science";
   extraPackages = ps: [ ps.numpy ];
 }
