@@ -4,6 +4,16 @@
   outputs = { self }: {
 
     templates = {
+      android = {
+        path = ./android;
+        description = "Android development template without android studio";
+        welcomeText = ''
+          You have created a Android template that will help you develop android
+          applications without Android Studio. See the README for instructions on
+          how to use the template.
+        '';
+      };
+
       rust = {
         path = ./rust;
         description = "Rust development template using fenix";
