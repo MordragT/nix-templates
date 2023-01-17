@@ -8,30 +8,27 @@ Minimal development template for svelte
 
 </div>
 
-#### Who is this for
+## About
 
-- Who's not very comfortable with Flakes (you still need to have a basic understanding)
-- Need something minimal that *just works*™
+This is a minimal template to create websites with svelte and tailwind.
 
-#### Reference
+## Initialization
 
-- [wiki/Flakes](https://nixos.wiki/wiki/Flakes)❗Read the output schema carefully (especially `defaultPackage`, `legacyPackages` and `devShells`)❗
+See the parent README for further instructions, but you can initialize this template
+with the following command in your current directory.
 
-#### So how do I use it ??
+```bash
+nix flake init -t github:MordragT/nix-templates#android
+```
 
-Click on the `Use this template` button (https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
-and run `nix flake update` to update the flake lock
-
-#### Commands
+## Usage
 
 - `nix develop`: opens up a `bash` shell with the specified packages
 - `nix build` : builds the package to the symbolic `result` directory
-- `nix run`: runs the package
+- `npm install`: installs all the necessary packages
+- `npm dev`: opens the website in the browser
+- You can also add this template to your nixos configuration to deploy the webiste with caddy
 
-#### FAQ
+#### Reference
 
-... Waiting for questions ... (raise an issue in case of doubts)
-
-#### Support
-
-Consider starring the repo ⭐🚀
+1. [wiki/Flakes](https://nixos.wiki/wiki/Flakes)
