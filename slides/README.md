@@ -8,38 +8,26 @@ Minimal **Slides** template for **Nix**
 
 </div>
 
-#### Who is this for
+## About
 
-- Someone who wants to create presentations on NixOS
-- Who's not very comfortable with Flakes (you still need to have a basic understanding)
-- Need something minimal that *just works*™
+This is a minimal template to create a presentation with reveal.js
+
+## Initialization
+
+See the parent README for further instructions, but you can initialize this template
+with the following command in your current directory.
+
+```bash
+nix flake init -t github:MordragT/nix-templates#android
+```
+
+## Usage
+
+- `nix develop`: opens up a `bash` shell with the yarn package manager
+- `yarn install`: installs all the necessary packages to run the presentation
+- `yarn dev`: opens the presentation in your browser
 
 #### Reference
 
-1. [wiki/Flakes](https://nixos.wiki/wiki/Flakes)❗Read the output schema carefully (especially `defaultPackage`, `legacyPackages` and `devShells`)❗
+1. [wiki/Flakes](https://nixos.wiki/wiki/Flakes)
 2. [Reveal.js](https://revealjs.com/) - javascript presentation framework
-
-#### So how do I use it ??
-
-Click on the `Use this template` button (https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
-and run `nix flake update .` to update the flake lock
-
-#### Commands
-
-- `nix develop`: opens up a `bash` shell with the poetry package
-- `nix build` : builds the Deno project.
-- `nix run`: runs the Deno program.
-
-#### FAQ
-
-... Waiting for questions ... (raise an issue in case of doubts)
-
-#### Support
-
-Consider starring the repo ⭐🗒️
-
-#### Acknowledgments
-
-- [Rust template](https://github.com/helium18/template-nix) which gave the inspiration
-
-
