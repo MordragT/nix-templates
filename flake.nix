@@ -14,8 +14,18 @@
         '';
       };
 
-      rust = {
-        path = ./rust;
+      rust-stable = {
+        path = ./rust-stable;
+        description = "Rust development template";
+        welcomeText = ''
+          You have created a Rust template that will help you manage
+          your project. See the README for instructions on how to use
+          the template.
+        '';
+      };
+
+      rust-nightly = {
+        path = ./rust-nightly;
         description = "Rust development template using fenix";
         welcomeText = ''
           You have created a Rust template that will help you manage

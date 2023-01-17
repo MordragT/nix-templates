@@ -10,15 +10,12 @@
   };
 
   outputs = { self, nixpkgs, utils, fenix, ... }:
-    # Output schema from https://nixos.wiki/wiki/Flakes
     utils.lib.eachDefaultSystem
       (system:
         let
-          pname = "template";
-          version = "0.1.0";
           pkgs = import nixpkgs {
             inherit system;
-            overlays = [ fenix.overlay ];
+            overlays = [ fenix.overlays.default ];
           };
           toolchain = pkgs.fenix.complete;
         in
@@ -29,7 +26,8 @@
             # Use nightly rustc and cargo provided by fenix for building
             inherit (toolchain) cargo rustc;
           }).buildRustPackage {
-            inherit pname version;
+            pname = "template";
+            version = "0.1.0";
             src = ./.;
             cargoLock.lockFile = ./Cargo.lock;
 
