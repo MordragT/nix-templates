@@ -14,28 +14,24 @@
       let
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [ deno2nix.overlay ];
+          overlays = [ deno2nix.overlays.default ];
         };
-
-        name = "template";
       in
       rec {
 
-        apps.${name} = utils.lib.mkApp {
-          drv = packages.${name};
+        apps.default = utils.lib.mkApp {
+          drv = packages.default;
         };
-        apps.default = apps.${name};
 
-        packages.${name} = pkgs.deno2nix.mkExecutable {
-          inherit name;
-
-          src = self;
+        packages.default = pkgs.deno2nix.mkExecutable {
+          pname = "template";
           version = "0.1.0";
-          lockfile = ./lock.json;
-          importMap = ./import_map.json;
-          entrypoint = ./src/index.ts;
+
+          src = ./.;
+          lockfile = "./lock.json";
+          config = "./deno.jsonc";
+          entrypoint = "./src/index.ts";
         };
-        packages.default = packages.${name};
 
         devShell = pkgs.mkShell {
           buildInputs = with pkgs; [
@@ -43,6 +39,5 @@
             just
           ];
         };
-
       });
 }

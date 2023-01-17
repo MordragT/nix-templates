@@ -1,0 +1,20 @@
+{
+    "importMap": "./import_map.json",
+    "tasks": {
+        "run": "deno run ./src/index.ts",
+        "compile": "deno compile ./src/index.ts"
+    },
+    "fmt": {
+        "options": {
+            "lineWidth": 120,
+            "indentWidth": 2,
+            "singleQuote": false,
+            "useTabs": false
+        },
+        "files": {
+            "exclude": [
+                "./lock.json"
+            ]
+        }
+    }
+}
