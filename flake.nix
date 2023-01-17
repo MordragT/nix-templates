@@ -44,16 +44,6 @@
         '';
       };
 
-      jupyter-py = {
-        path = ./jupyter-py;
-        description = "Jupyter development template for Python using JupyterWith";
-        welcomeText = ''
-          You have created a Jupyter Python template that will help you
-          manage your notebooks. See the README for instructions on how to
-          use the template.
-        '';
-      };
-
       deno = {
         path = ./deno;
         description = "Deno runtime development template using deno2nix";
