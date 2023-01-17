@@ -9,39 +9,30 @@ Minimal **Python** development template for **Nix**
 
 </div>
 
-#### Who is this for
+## About
 
-- Someone who wants to apply Nix's power for Python development.
-- Who's not very comfortable with Flakes (you still need to have a basic understanding)
-- Need something minimal that *just works*™
+This is a minimal template for Python development with Poetry. 
 
-#### Reference
+## Initialization
 
-1. [wiki/Flakes](https://nixos.wiki/wiki/Flakes)❗Read the output schema carefully (especially `defaultPackage`, `legacyPackages` and `devShells`)❗
-2. [Poetry](https://python-poetry.org/) - used for python package management
-3. [Poetry2Nix](https://github.com/nix-community/poetry2nix) - used to convert poetry projects into nix packages
+See the parent README for further instructions, but you can initialize this template
+with the following command in your current directory.
 
-#### So how do I use it ??
+```bash
+nix flake init -t github:MordragT/nix-templates#android
+```
 
-Click on the `Use this template` button (https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
-and run `nix flake update .` to update the flake lock
-
-#### Commands
+## Usage
 
 - `nix develop`: opens up a `bash` shell with the poetry package
 - `nix build` : builds the Python project. Outputs the scripts defined in the `pyproject.toml` to `./result/bin/<name>`
 - `nix run`: runs the Python program.
 
-#### FAQ
 
-... Waiting for questions ... (raise an issue in case of doubts)
+## Reference
 
-#### Support
-
-Consider starring the repo ⭐🐍
-
-#### Acknowledgments
-
-- [Rust template](https://github.com/helium18/template-nix) which gave the inspiration
+1. [wiki/Flakes](https://nixos.wiki/wiki/Flakes)
+2. [Poetry](https://python-poetry.org/) - used for python package management
+3. [Poetry2Nix](https://github.com/nix-community/poetry2nix) - used to convert poetry projects into nix packages
 
 

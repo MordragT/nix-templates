@@ -15,25 +15,21 @@
         overrides = pkgs.poetry2nix.overrides.withDefaults (final: prev: {
           # Python dependency overrides go here
         });
-
-        packageName = "package-name";
       in
       {
 
-        packages.${packageName} = pkgs.poetry2nix.mkPoetryApplication {
+        packages.default = pkgs.poetry2nix.mkPoetryApplication {
           inherit python projectDir overrides;
           # Non-Python runtime dependencies go here
           propogatedBuildInputs = [ ];
         };
-
-        packages.default = self.packages.${system}.${packageName};
 
         devShell = pkgs.mkShell {
           buildInputs = [
             (pkgs.poetry2nix.mkPoetryEnv {
               inherit python projectDir overrides;
             })
-            pkgs.python310Packages.poetry
+            pkgs.poetry
           ];
         };
 
