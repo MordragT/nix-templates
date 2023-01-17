@@ -9,7 +9,7 @@
 
     utils.lib.eachDefaultSystem (system:
       let
-        javaVersion = 17;
+        javaVersion = 19;
 
         overlays = [
           (self: super: rec {

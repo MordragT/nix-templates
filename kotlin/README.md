@@ -9,37 +9,26 @@ Minimal **Kotlin** development template for **Nix** using **Gradle**
 
 </div>
 
-#### Who is this for
 
-- Someone who wants to apply Nix's power for Kotlin development.
-- Who's not very comfortable with Flakes (you still need to have a basic understanding)
-- Need something minimal that *just works*™
+## About
 
-#### Reference
+This is a minimal template for Kotlin development with Gradle.
 
-1. [wiki/Flakes](https://nixos.wiki/wiki/Flakes)❗Read the output schema carefully (especially `defaultPackage`, `legacyPackages` and `devShells`)❗
+## Initialization
 
-#### So how do I use it ??
+See the parent README for further instructions, but you can initialize this template
+with the following command in your current directory.
 
-Click on the `Use this template` button (https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
-and run `nix flake update .` to update the flake lock
+```bash
+nix flake init -t github:MordragT/nix-templates#android
+```
 
-#### Commands
+## Usage
 
-- `nix develop`: opens up a `bash` shell with the poetry package
-- `nix build` : builds the Python project. Outputs the scripts defined in the `pyproject.toml` to `./result/bin/<name>`
-- `nix run`: runs the Python program.
+- `nix develop`: opens up a `bash` shell with the required packages
 
-#### FAQ
+## Reference
 
-... Waiting for questions ... (raise an issue in case of doubts)
-
-#### Support
-
-Consider starring the repo ⭐🟪
-
-#### Acknowledgments
-
-- [Rust template](https://github.com/helium18/template-nix) which gave the inspiration
+1. [wiki/Flakes](https://nixos.wiki/wiki/Flakes)
 
 
