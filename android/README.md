@@ -9,34 +9,28 @@ Minimal **Android** development template for **Nix** using **Gradle**
 
 </div>
 
-#### Who is this for
+## About
 
-- Someone who wants to apply Nix's power for Android development.
-- Wants to develop Android applications without Android Studio
-- Who's not very comfortable with Flakes (you still need to have a basic understanding)
-- Need something minimal that *just works*™
+This is a minimal template for Android App development in Kotlin.
+You can use this template with any IDE or editor via the Gradle tasks.
 
-#### Reference
+## Initialization
 
-1. [wiki/Flakes](https://nixos.wiki/wiki/Flakes)❗Read the output schema carefully (especially `defaultPackage`, `legacyPackages` and `devShells`)❗
+See the parent README for further instructions, but you can initialize this template
+with the following command in your current directory.
 
-#### So how do I use it ??
+```bash
+nix flake init -t github:MordragT/nix-templates#android
+```
 
-After running `nix develop` copy the content of `local.properties` into `gradle.properties`.
-Now you can run the different gradle tasks to build your app or install it on your phone.
+## Usage
 
-#### Commands
+First run `nix develop`, which opens up a `bash` shell with all necessary packages
+and creates a `local.properties` file.
+Copy the content of `local.properties` into `gradle.properties`.
+Now you can run the different Gradle tasks to build your app or install it on your phone.
 
-- `nix develop`: opens up a `bash` shell with all necessary packages
+## Reference
 
-#### FAQ
+1. [wiki/Flakes](https://nixos.wiki/wiki/Flakes)
 
-... Waiting for questions ... (raise an issue in case of doubts)
-
-#### Support
-
-Consider starring the repo ⭐📱
-
-#### Acknowledgments
-
-- [Rust template](https://github.com/helium18/template-nix) which gave the inspiration
