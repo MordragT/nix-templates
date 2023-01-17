@@ -23,7 +23,7 @@ nix flake init -t github:MordragT/nix-templates#android
 
 ## Usage
 
-- `nix develop`: opens up a `bash` shell with the poetry package
+- `nix develop`: opens up a `bash` shell with the required packages
 - `nix build` : builds the Deno project.
 - `nix run`: runs the Deno program.
 
