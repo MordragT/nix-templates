@@ -18,7 +18,7 @@ See the parent README for further instructions, but you can initialize this temp
 with the following command in your current directory.
 
 ```bash
-nix flake init -t github:MordragT/nix-templates#android
+nix flake init -t github:MordragT/nix-templates#rust-nightly
 ```
 
 ## Usage
