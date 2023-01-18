@@ -1,0 +1,108 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../node_modules/reveal.js/css/theme/template/mixins.scss";
+@import "../node_modules/reveal.js/css/theme/template/settings.scss";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+//@import url(./fonts/source-sans-pro/source-sans-pro.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #222;
+$headingColor: #222;
+
+$mainFontSize: 42px;
+$mainFont: Verdana;
+$headingFont: Verdana;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #00b5ad;
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+.reveal .slide-number {
+    right: 24px;
+    bottom: 96px;
+    font-size: 32px;
+    color: #000;
+    background-color: transparent;
+}
+
+.reveal .footer {
+    position: fixed;
+    display: block;
+    bottom: 64px;
+    left: 2.5%;
+    width: 90%;
+    z-index: 16;
+    border-top: 3px solid #000;
+    font-size: x-large;
+}
+
+.reveal .footer-title {
+    position: inherit;
+}
+
+.reveal .footer-date {
+    position: inherit;
+    right: 7.5%;
+}
+
+.reveal .logo {
+    position: fixed;
+    display: block;
+    right: 0px;
+    top: 128px;
+    z-index: 31;
+    width: 105px;
+    height: 360px;
+    background-image: url('../img/fh_aachen_logo.svg');
+    background-size: 105px;
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+}
+
+@mixin is-dark($color) {
+    section.is-dark {
+
+        &,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $color;
+        }
+    }
+}
+
+@include is-dark(#fff);
+
+// Change text colors against dark slide backgrounds
+@include dark-bg-text-color(#fff);
+
+// Theme template ------------------------------
+@import "../node_modules/reveal.js/css/theme/template/theme.scss";
+// ---------------------------------------------
+
+// Bulma ---------------------------------------
+//@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+// ---------------------------------------------

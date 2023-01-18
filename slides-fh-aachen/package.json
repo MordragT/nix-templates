@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "lottie-web": "^5.9.6",
     "reveal.js": "^4.3.1"
   },
   "devDependencies": {
