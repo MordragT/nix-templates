@@ -31,7 +31,6 @@
           # Used by `nix develop`
           devShells.default = pkgs.mkShell {
 
-            # Use nightly cargo & rustc provided by fenix. Add for packages for the dev shell here
             buildInputs = with pkgs; [
               (with toolchain; [
                 rust.cargo
