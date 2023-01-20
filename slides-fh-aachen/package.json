@@ -1,8 +1,8 @@
 {
-  "name": "nix-template-slides",
+  "name": "slides-fh",
   "version": "1.0.0",
   "main": "src/index.html",
-  "repository": "git@github.com:MordragT/nix-template-slides",
+  "repository": "git@github.com:MordragT/nix-templates",
   "author": "Thomas Wehmöller <connect.mordrag@gmx.de>",
   "license": "MIT",
   "scripts": {
