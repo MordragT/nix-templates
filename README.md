@@ -17,6 +17,8 @@ Minimal development templates for **Nix**
 
 #### What templates are offered ?
 
+- Android template using kotlin 📱
+- Angular development template 🅰️
 - Deno runtime development template using deno2nix 🦖
 - Rust development template using fenix 🦀
 - Python development template using poetry2nix 🐍

@@ -14,6 +14,15 @@
         '';
       };
 
+      angular = {
+        path = ./angular;
+        description = "Angular development template";
+        welcomeText = ''
+          You have created an Angular template that will help you develop your
+          frontend application. See the README for further instructions.
+        '';
+      };
+
       rust-stable = {
         path = ./rust-stable;
         description = "Rust development template";
