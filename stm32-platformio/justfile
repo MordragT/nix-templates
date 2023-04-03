@@ -1,0 +1,2 @@
+upload:
+    sudo platformio run -t upload

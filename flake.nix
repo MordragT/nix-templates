@@ -102,6 +102,16 @@
         '';
       };
 
+      stm32-platformio = {
+        path = ./stm32-platformio;
+        description = "Development shell and template for platformio with stm32f4";
+        welcomeText = ''
+          You have created a platformio template that will help you develop
+          applications for your stm32f4 board. See the README for instructions on how
+          to use the tempalte.
+        '';
+      };
+
       svelte-tailwind = {
         path = ./svelte-tailwind;
         description = "Svelte development template with tailwind.css";
