@@ -1,2 +1,5 @@
 upload:
-    sudo platformio run -t upload
+    platformio run -t upload
+
+cubemx:
+    stm32cubemx

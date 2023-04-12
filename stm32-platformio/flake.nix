@@ -13,11 +13,15 @@
       {
         devShell = pkgs.mkShell {
           buildInputs = with pkgs; [
+            ccls # c language server powered by clang
             python3
             platformio
             stlink
             openocd
             just
+            stm32cubemx
+            saleae-logic-2
+            gcc-arm-embedded
           ];
         };
       });
