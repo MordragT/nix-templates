@@ -10,6 +10,7 @@
         devShells.default = pkgs.mkShell rec {
           buildInputs = with pkgs; [
             typst
+            hayagriva
             just
           ];
 
