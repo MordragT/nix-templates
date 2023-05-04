@@ -62,8 +62,18 @@
           '';
         };
 
-        python = {
-          path = ./python;
+        python-micromamba = {
+          path = ./python-micromamba;
+          description = "Python development template using micromamba";
+          welcomeText = ''
+            You have created a Python template that will help you manage
+            your project. See the README for instructions on how to use
+            the template.
+          '';
+        };
+
+        python-poetry = {
+          path = ./python-poetry;
           description = "Python development template using poetry2nix";
           welcomeText = ''
             You have created a Python template that will help you manage
