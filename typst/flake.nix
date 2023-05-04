@@ -5,7 +5,8 @@
 
   outputs = { self, nixpkgs, utils }:
     utils.lib.eachDefaultSystem (system:
-      let pkgs = import nixpkgs { inherit system; }; in rec
+      let pkgs = import nixpkgs { inherit system; }; in
+      rec
       {
         devShells.default = pkgs.mkShell rec {
           buildInputs = with pkgs; [
