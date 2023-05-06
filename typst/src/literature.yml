@@ -9,14 +9,3 @@ dependence:
         title: ACM Transactions on Programming Languages and Systems
         volume: 9
         issue: 3
-
-feminism:
-    type: Article
-    title: She swoons to conquer
-    author: Ungard-Sargon, Batya
-    editor: Weintraub, Pam
-    date: 2015-09-25
-    url: https://aeon.co/essays/can-you-enjoy-romance-fiction-and-be-a-feminist
-    parent:
-        type: Blog
-        title: Aeon

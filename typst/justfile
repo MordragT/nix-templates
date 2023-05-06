@@ -5,7 +5,7 @@ init:
     mkdir -p {{ outdir }}
 
 build: init
-    typst src/index.typ {{ outdir }}/{{ output }}
+    typst compile src/index.typ {{ outdir }}/{{ output }}
 
 watch: init
-    typst --watch src/index.typ {{ outdir }}/{{ output }}
+    typst watch src/index.typ {{ outdir }}/{{ output }}
