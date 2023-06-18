@@ -10,7 +10,7 @@ Minimal **Slides** template for **Nix**
 
 ## About
 
-This is a minimal template to create a presentation with reveal.js
+This is a minimal template to create a presentation with marp
 
 ## Initialization
 
@@ -23,11 +23,10 @@ nix flake init -t github:MordragT/nix-templates#slides-fh-aachen
 
 ## Usage
 
-- `nix develop`: opens up a `bash` shell with the yarn package manager
-- `yarn install`: installs all the necessary packages to run the presentation
-- `yarn dev`: opens the presentation in your browser
+- `nix develop`: opens up a `bash` shell with the sass compiler
+- Use the marp vscode extension in nixos to create a slide deck
 
 #### Reference
 
 1. [wiki/Flakes](https://nixos.wiki/wiki/Flakes)
-2. [Reveal.js](https://revealjs.com/) - javascript presentation framework
+2. [Marp](https://marpit.marp.app/) - javascript presentation framework
