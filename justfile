@@ -1,8 +1,8 @@
 update-all:
     #!/usr/bin/env nu
-    for $dir in (ls | where type == dir) {
-        enter $dir.name
-        nix flake update
-        exit
-    }
+    (ls
+    | where type == dir
+    | each {|$dir| 
+        nix flake update $"./($dir.name)"
+    })
     nix flake update
