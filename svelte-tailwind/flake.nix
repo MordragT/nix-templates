@@ -5,43 +5,48 @@
     utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, utils }:
+  outputs = {
+    self,
+    nixpkgs,
+    utils,
+  }:
     utils.lib.eachDefaultSystem
-      (system:
-        let
-          pkgs = import nixpkgs { inherit system; };
-        in
-        rec
-        {
-          # Used by `nix build`
-          packages.default = pkgs.buildNpmPackage {
-            pname = "webserver";
-            version = "0.1.0";
-            src = ./.;
-            npmDepsHash = "sha256-avklzMz/OKjKGXYkWtlbZf9cUT0TbiGq9X+nj/+hjCw=";
-            installPhase = ''
-              cp -r build $out
-            '';
-          };
+    (
+      system: let
+        pkgs = import nixpkgs {inherit system;};
+      in {
+        # Used by `nix build`
+        packages.default = pkgs.buildNpmPackage {
+          pname = "webserver";
+          version = "0.1.0";
+          src = ./.;
+          npmDepsHash = "sha256-avklzMz/OKjKGXYkWtlbZf9cUT0TbiGq9X+nj/+hjCw=";
+          installPhase = ''
+            cp -r build $out
+          '';
+        };
 
-          # Used by `nix develop`
-          devShells.default = pkgs.mkShell rec {
-            buildInputs = with pkgs;
-              [
-                nodejs
-              ];
+        # Used by `nix develop`
+        devShells.default = pkgs.mkShell rec {
+          buildInputs = with pkgs; [
+            nodejs
+          ];
 
-            LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath buildInputs;
-          };
-        }
-      ) // {
-      nixosModules.default = { config, lib, pkgs, ... }:
-        with lib;
-        let
+          LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath buildInputs;
+        };
+      }
+    )
+    // {
+      nixosModules.default = {
+        config,
+        lib,
+        pkgs,
+        ...
+      }:
+        with lib; let
           name = "svelte-caddy";
           cfg = config.services.${name};
-        in
-        {
+        in {
           options.services.${name} = {
             enable = mkEnableOption "Enables the Svelte Caddy service";
 

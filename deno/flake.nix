@@ -9,35 +9,37 @@
     };
   };
 
-  outputs = { self, nixpkgs, utils, deno2nix }:
-    utils.lib.eachDefaultSystem (system:
-      let
-        pkgs = import nixpkgs {
-          inherit system;
-          overlays = [ deno2nix.overlays.default ];
-        };
-      in
-      rec {
+  outputs = {
+    self,
+    nixpkgs,
+    utils,
+    deno2nix,
+  }:
+    utils.lib.eachDefaultSystem (system: let
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [deno2nix.overlays.default];
+      };
+    in rec {
+      apps.default = utils.lib.mkApp {
+        drv = packages.default;
+      };
 
-        apps.default = utils.lib.mkApp {
-          drv = packages.default;
-        };
+      packages.default = pkgs.deno2nix.mkExecutable {
+        pname = "template";
+        version = "0.1.0";
 
-        packages.default = pkgs.deno2nix.mkExecutable {
-          pname = "template";
-          version = "0.1.0";
+        src = ./.;
+        lockfile = "./lock.json";
+        config = "./deno.jsonc";
+        entrypoint = "./src/index.ts";
+      };
 
-          src = ./.;
-          lockfile = "./lock.json";
-          config = "./deno.jsonc";
-          entrypoint = "./src/index.ts";
-        };
-
-        devShell = pkgs.mkShell {
-          buildInputs = with pkgs; [
-            deno
-            just
-          ];
-        };
-      });
+      devShell = pkgs.mkShell {
+        buildInputs = with pkgs; [
+          deno
+          just
+        ];
+      };
+    });
 }
