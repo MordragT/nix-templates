@@ -12,3 +12,8 @@ Notes are written here
 ---
 
 # Horizontal
+
+```nix
+{
+  highlightSupported: true;
+}

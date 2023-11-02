@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "highlight.js": "^11.9.0",
     "reveal.js": "^4.3.1"
   },
   "devDependencies": {
