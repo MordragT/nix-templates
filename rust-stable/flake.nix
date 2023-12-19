@@ -9,7 +9,6 @@
     self,
     nixpkgs,
     utils,
-    fenix,
     ...
   }:
     utils.lib.eachDefaultSystem
@@ -37,8 +36,8 @@
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
             (with toolchain; [
-              rust.cargo
-              rust.rustc
+              cargo
+              rustc
               rustLibSrc
             ])
             clippy

@@ -83,6 +83,16 @@
         '';
       };
 
+      python-venv = {
+        path = ./python-venv;
+        description = "Python development template using venv";
+        welcomeText = ''
+          You have created a Python template that will help you manage
+          your project. See the README for instructions on how to
+          use the template.
+        '';
+      };
+
       rust-stable = {
         path = ./rust-stable;
         description = "Rust development template";

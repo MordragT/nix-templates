@@ -14,7 +14,7 @@
     utils.lib.eachDefaultSystem (system: let
       pkgs = import nixpkgs {inherit system;};
 
-      python = pkgs.python310;
+      python = pkgs.python3;
       projectDir = ./.;
       overrides = pkgs.poetry2nix.overrides.withDefaults (final: prev: {
         # Python dependency overrides go here
