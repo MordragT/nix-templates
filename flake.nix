@@ -34,6 +34,15 @@
         '';
       };
 
+      cpp = {
+        path = ./cpp;
+        description = "C++ development template using cmake";
+        welcomeText = ''
+          You have created an C++ template using cmake.
+          See the README for further instructions.
+        '';
+      };
+
       deno = {
         path = ./deno;
         description = "Deno runtime development template using deno2nix";
