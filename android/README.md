@@ -25,9 +25,7 @@ nix flake init -t github:MordragT/nix-templates#android
 
 ## Usage
 
-First run `nix develop`, which opens up a `bash` shell with all necessary packages
-and creates a `local.properties` file.
-Copy the content of `local.properties` into `gradle.properties`.
+First run `nix develop`, which opens up a `bash` shell with all necessary packages.
 Now you can run the different Gradle tasks to build your app or install it on your phone.
 
 ## Reference

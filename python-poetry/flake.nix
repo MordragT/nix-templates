@@ -3,16 +3,23 @@
 
   inputs = {
     utils.url = "github:numtide/flake-utils";
+    poetry2nix.url = "github:nix-community/poetry2nix";
   };
 
   outputs = {
     self,
     nixpkgs,
     utils,
+    poetry2nix,
     ...
   }:
     utils.lib.eachDefaultSystem (system: let
-      pkgs = import nixpkgs {inherit system;};
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [
+          poetry2nix.overlays.default
+        ];
+      };
 
       python = pkgs.python3;
       projectDir = ./.;

@@ -3,16 +3,21 @@
 
   inputs = {
     utils.url = "github:numtide/flake-utils";
+    gradle2nix = {
+      url = "github:tadfisher/gradle2nix/v2";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     self,
     nixpkgs,
     utils,
+    gradle2nix,
     ...
   }:
     utils.lib.eachDefaultSystem (system: let
-      javaVersion = 19;
+      javaVersion = 21;
 
       overlays = [
         (self: super: rec {
@@ -28,33 +33,30 @@
 
       pkgs = import nixpkgs {inherit overlays system;};
     in {
-      # # Executed by `nix build`
-      # packages.default = pkgs.stdenv.mkDerivation {
-      #   pname = "template";
-      #   version = "0.1.0";
+      # Executed by `nix build`
+      # packages.default = gradle2nix.builders."${system}".buildGradlePackage {
+      #   pname = "my-package";
+      #   version = "1.0";
+
       #   src = ./.;
+      #   lockFile = ./gradle.lock;
 
-      #   nativeBuildInputs = with pkgs; [
-      #     kotlin
-      #     gradle
-      #   ];
+      #   gradleInstallFlags = ["installDist"];
+      #   gradlePackage = pkgs.gradle;
 
-      #   buildPhase = ''
-      #     export GRADLE_USER_HOME=$(mktemp -d)
-      #     export JAVA_HOME=${pkgs.jdk.home}
-
-      #     $src/gradlew build --offline --no-daemon --no-build-cache --no-watch-fs \
-      #       --info --full-stacktrace --warning-mode=all
-      #   '';
-
+      #   buildJdk = pkgs.jdk;
       # };
 
       # # Executed by `nix run`
-      # apps.default = utils.lib.mkApp { drv = packages.default; };
+      # apps.default = utils.lib.mkApp {drv = self.packages.default;};
 
       # Used by `nix develop`
       devShells.default = pkgs.mkShell {
-        buildInputs = with pkgs; [kotlin gradle];
+        buildInputs = with pkgs; [
+          kotlin
+          gradle
+          gradle2nix.packages."${system}".default
+        ];
 
         shellHook = ''
           ${pkgs.kotlin}/bin/kotlin -version

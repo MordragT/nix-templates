@@ -12,7 +12,7 @@
     ...
   }:
     utils.lib.eachDefaultSystem (system: let
-      javaVersion = 19;
+      javaVersion = 21;
 
       overlays = [
         (self: super: rec {
@@ -35,8 +35,8 @@
     in {
       # Used by `nix develop`
       devShells.default = let
-        buildToolsVersion = "33.0.1";
-        platformVersion = "32";
+        buildToolsVersion = "34.0.0";
+        platformVersion = "34";
 
         android-composition = pkgs.androidenv.composeAndroidPackages {
           buildToolsVersions = [buildToolsVersion];
@@ -64,17 +64,13 @@
 
           shellHook = ''
             ${pkgs.kotlin}/bin/kotlin -version
-
-            if [ ! -f "local.properties" ]; then
-              echo android.aapt2FromMavenOverride=${ANDROID_SDK_ROOT}/build-tools/${buildToolsVersion}/aapt2 >> local.properties
-            fi
           '';
 
           JAVA_HOME = pkgs.jdk.home;
           ANDROID_SDK_ROOT = "${android-sdk}/libexec/android-sdk";
-          #ANDROID_NDK_ROOT = "${ANDROID_SDK_ROOT}/ndk-bundle";
+          ANDROID_NDK_ROOT = "${ANDROID_SDK_ROOT}/ndk-bundle";
           ANDROID_HOME = ANDROID_SDK_ROOT;
-          # not working anymore ? GRADLE_OPTS = "-Dorg.gradle.project.android.aapt2FromMavenOverride=${ANDROID_SDK_ROOT}/build-tools/${buildToolsVersion}/aapt2";
+          GRADLE_OPTS = "-Dorg.gradle.project.android.aapt2FromMavenOverride=${ANDROID_SDK_ROOT}/build-tools/${buildToolsVersion}/aapt2";
         };
     });
 }
