@@ -18,7 +18,7 @@
     utils.lib.eachDefaultSystem (system: let
       pkgs = import nixpkgs {
         inherit system;
-        overlays = [fenix.overlay];
+        overlays = [fenix.overlays.default];
       };
       toolchain = pkgs.fenix.complete;
       buildInputs = with pkgs; [
