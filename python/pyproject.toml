@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "package"
+version = "0.1.0"
+
+authors = [{ name = "Max Mustermann", email = "mail@example.com" }]
+maintainers = []
+description = ""
+readme = "README.md"
+keywords = []
+license = { text = "MIT License" }
+
+requires-python = ">=3.10"
+dependencies = ["numpy"]
+
+[project.scripts]
+package = "package.main:main"

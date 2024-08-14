@@ -72,6 +72,16 @@
         '';
       };
 
+      python = {
+        path = ./python;
+        description = "Python development template using just Nix";
+        welcomeText = ''
+          You have created a Python template that will help you manage
+          your project. See the README for instructions on how to use
+          the template.
+        '';
+      };
+
       python-micromamba = {
         path = ./python-micromamba;
         description = "Python development template using micromamba";
