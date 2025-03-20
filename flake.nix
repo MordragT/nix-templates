@@ -142,11 +142,11 @@
         '';
       };
 
-      slides-fh-aachen = {
-        path = ./slides-fh-aachen;
-        description = "Presentation development template using reveal.js with FH Aachen theme";
+      slidev = {
+        path = ./slidev;
+        description = "Presentation development template using slidev";
         welcomeText = ''
-          You have created a Reveal.js template that will help you manage
+          You have created a Slidev template that will help you manage
           your presentation. See the README for instructions on how to
           use the template.
         '';
