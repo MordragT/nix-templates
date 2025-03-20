@@ -1,0 +1,12 @@
+{
+	"scripts": {
+		"build": "slidev build",
+		"dev": "slidev --open",
+		"export": "slidev export"
+	},
+	"dependencies": {
+		"@slidev/cli": "^51.4.0",
+		"@slidev/theme-default": "^0.25.0",
+		"@slidev/theme-seriph": "^0.25.0"
+	}
+}

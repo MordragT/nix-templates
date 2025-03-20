@@ -1,5 +1,5 @@
 {
-  description = "Tauri Javascript App";
+  description = "Slidev Template";
 
   inputs = {
     utils.url = "github:numtide/flake-utils";
@@ -15,7 +15,8 @@
     in {
       devShell = pkgs.mkShell {
         buildInputs = with pkgs; [
-          sass
+          pnpm
+          nodejs
         ];
       };
     });

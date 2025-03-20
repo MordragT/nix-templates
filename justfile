@@ -3,6 +3,6 @@ update-all:
     (ls
     | where type == dir
     | each {|$dir| 
-        nix flake update $"./($dir.name)"
+        nix flake update --flake $"./($dir.name)"
     })
     nix flake update

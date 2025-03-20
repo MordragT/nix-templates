@@ -1,16 +1,16 @@
 <div align=center>
 
-# ❄️ nix-template-slides 🗒️
+# ❄️ nix-template-slidev 🗒️
 
 [![NixOS](https://img.shields.io/badge/Made_for-javascript-yellow.svg?logo=javascript&style=for-the-badge)](https://www.javascript.com/) [![NixOS](https://img.shields.io/badge/Flakes-Nix-informational.svg?logo=nixos&style=for-the-badge)](https://nixos.org) ![License](https://img.shields.io/github/license/mordragt/nix-templates?style=for-the-badge) 
 
-Minimal **Slides** template for **Nix**
+Minimal **Slidev** template for **Nix**
 
 </div>
 
 ## About
 
-This is a minimal template to create a presentation with marp
+This is a minimal template to create a presentation with Slidev
 
 ## Initialization
 
@@ -18,7 +18,7 @@ See the parent README for further instructions, but you can initialize this temp
 with the following command in your current directory.
 
 ```bash
-nix flake init -t github:MordragT/nix-templates#slides-fh-aachen
+nix flake init -t github:MordragT/nix-templates#slidev
 ```
 
 ## Usage
@@ -29,4 +29,4 @@ nix flake init -t github:MordragT/nix-templates#slides-fh-aachen
 #### Reference
 
 1. [wiki/Flakes](https://nixos.wiki/wiki/Flakes)
-2. [Marp](https://marpit.marp.app/) - javascript presentation framework
+2. [Slidev](https://sli.dev/)
