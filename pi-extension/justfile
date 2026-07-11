@@ -1,0 +1,14 @@
+# 默认 recipe: 列出可用命令
+default:
+    @just --list
+
+# 运行单元测试
+test:
+    bun vitest run
+
+# TypeScript 类型检查 (不执行代码)
+check:
+    bunx tsc --noEmit
+
+# 提交前完整校验
+verify: check test

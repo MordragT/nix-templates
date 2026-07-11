@@ -216,6 +216,14 @@
         # welcomeText = ''
         # '';
       };
+
+      pi-extension = {
+        path = ./pi-extension;
+        description = "Pi extension template using mise (no flake)";
+        welcomeText = ''
+          pi extension template created. Run: mise install && bun install && just verify
+        '';
+      };
     };
   };
 }

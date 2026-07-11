@@ -1,0 +1,3 @@
+# 项目需要的非常规 CLI 加在这里 (bun/node 复用系统)
+# [tools]
+# just = "latest"
